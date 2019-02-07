@@ -40,6 +40,7 @@ public class UserMealsUtil {
                         sumCalories.get(userMeal.getDateTime().toLocalDate())>caloriesPerDay));
         }
 
+
         return userMealWithExceeds;
     }
 
