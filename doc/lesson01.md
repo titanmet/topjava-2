@@ -64,7 +64,6 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSlZMTXBJRXJpakU">Maven.</a>
 - Среда сборки проектов <a href="http://www.apache-maven.ru/" target="_blank">Maven</a>.
 - <a href="http://search.maven.org/#browse">The Central Repository</a>
-- Настройка пропертей Maven: кодировка, java version, зависимости, maven-compiler-plugin
 - <a href="http://maven.apache.org/guides/mini/guide-multiple-modules.html">The Reactor</a>. Snapshots
 - <a href="http://habrahabr.ru/blogs/java/106717/" target="_blank">Недостатки Maven</a>. Другие инструменты сборки.
 - Справочник:
