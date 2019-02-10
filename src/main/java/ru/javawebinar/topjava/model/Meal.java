@@ -3,15 +3,22 @@ package ru.javawebinar.topjava.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.temporal.ChronoUnit;
 
-public class Meal {
+public class Meal extends HashId{
+
     private final LocalDateTime dateTime;
 
     private final String description;
 
     private final int calories;
 
+    public Meal(){
+        this(LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES),"",0);
+    }
+
     public Meal(LocalDateTime dateTime, String description, int calories) {
+        super(0);
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
