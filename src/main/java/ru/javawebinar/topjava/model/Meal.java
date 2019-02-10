@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
-public class Meal extends HashId{
+public class Meal extends Id {
 
     private final LocalDateTime dateTime;
 

@@ -23,7 +23,7 @@
         <c:forEach items="${mealsWithExceed}" var="meal">
             <c:url var="editUrl" value="/meals?action=edit&id=${meal.getId()}" />
             <c:url var="deleteUrl" value="/meals?action=delete&id=${meal.getId()}" />
-            <tr style="color: ${!meal.excess ? '#00ff00 ': '#ff0000 '};">
+            <tr style="color: ${!meal.excess ? '#106910 ': '#ff0000 '};">
                 <td><c:out value="${meal.getDateTime().toString().replace('T',' ')}"/></td>
                 <td><c:out value="${meal.getDescription()}"/></td>
                 <td><c:out value="${meal.getCalories()}"/></td>

@@ -1,9 +1,9 @@
 package ru.javawebinar.topjava.model;
 
-public class HashId {
+public class Id {
     private long id;
 
-    public HashId(long id) {
+    public Id(long id) {
         this.id = id;
     }
 
