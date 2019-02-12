@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.AtomicLong;
 public class MealRepositoryImpl implements MealRepository {
     private Map<Long,Meal> mealMap=new ConcurrentHashMap<>();
 
-    private AtomicLong atomicLong=new AtomicLong(100000L);
+    private AtomicLong atomicLong=new AtomicLong(0);
 
     public MealRepositoryImpl() {
         MealsUtil.meals.forEach(p-> {
