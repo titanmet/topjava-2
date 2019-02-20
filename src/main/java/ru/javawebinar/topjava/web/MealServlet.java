@@ -49,6 +49,8 @@ public class MealServlet extends HttpServlet {
             meal.setId(Integer.valueOf(id));
             controller.update(meal);
         }
+
+        response.sendRedirect("meals");
     }
 
     @Override
