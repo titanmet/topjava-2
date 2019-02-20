@@ -55,7 +55,18 @@ public class MealServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action=request.getParameter("action");
+        if(action==null){
 
+        }else if("login".equals(action)){
+
+        }else if("filter".equals(action)){
+
+        }else if("delete".equals(action)){
+
+        }else if("create".equals(action)){
+
+        }
     }
 
     private int getId(HttpServletRequest request) {
