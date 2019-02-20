@@ -26,21 +26,21 @@ public class MealRestController {
         return MealsUtil.getWithExcess(service.getAll(AuthorizedUser.id()),AuthorizedUser.getCaloriesPerDay());
     }
 
-    public List<MealTo> getFiltered(String startDateStr,String endDatestr,String startTimeStr,String enfTimestr){
+    public List<MealTo> getFiltered(String startDateStr,String endDateStr,String startTimeStr,String endTimeStr){
         log.info("getFiltered meal");
         List<Meal> meals;
-        if(startDateStr.equals("") && endDatestr.equals("")){
+        if(startDateStr.equals("") && endDateStr.equals("")){
             meals=service.getAll(AuthorizedUser.id());
         }else{
-            LocalDate startDate=startDateStr.equals("")?LocalDate.MIN:LocalDate.parse(startDateStr);
-            LocalDate endDate=endDatestr.equals("")?LocalDate.MAX:LocalDate.parse(endDatestr);
+            LocalDate startDate=startDateStr.equals("") ? LocalDate.MIN : LocalDate.parse(startDateStr);
+            LocalDate endDate=endDateStr.equals("") ? LocalDate.MAX : LocalDate.parse(endDateStr);
             meals=service.getFiltered(startDate,endDate,AuthorizedUser.id());
         }
-        if(startTimeStr.equals("") && endDatestr.equals("")){
+        if(startTimeStr.equals("") && endTimeStr.equals("")){
             return MealsUtil.getWithExcess(meals,AuthorizedUser.getCaloriesPerDay());
         }else {
             LocalTime startTime=startTimeStr.equals("")?LocalTime.MIN:LocalTime.parse(startTimeStr);
-            LocalTime endTime=enfTimestr.equals("")?LocalTime.MAX:LocalTime.parse(enfTimestr);
+            LocalTime endTime=endTimeStr.equals("")?LocalTime.MAX:LocalTime.parse(endTimeStr);
             return  MealsUtil.getFilteredWithExcess(meals,startTime,endTime,AuthorizedUser.getCaloriesPerDay());
         }
 

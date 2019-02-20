@@ -57,7 +57,7 @@ public class MealServlet extends HttpServlet {
         if(action==null){
             log.info("getAll");
             request.setAttribute("meals",controller.getAll());
-            request.getRequestDispatcher("/meals.jsp").forward(request,response);
+            request.getRequestDispatcher("meals.jsp").forward(request,response);
         }else if("login".equals(action)){
             AuthorizedUser.setId(Integer.parseInt(request.getParameter("authUser")));
             response.sendRedirect("meals");
@@ -72,7 +72,7 @@ public class MealServlet extends HttpServlet {
             request.setAttribute("endDate",endDate);
             request.setAttribute("startTime",startTime);
             request.setAttribute("endTime",endTime);
-            request.getRequestDispatcher("/meals.jsp").forward(request,response);
+            request.getRequestDispatcher("meals.jsp").forward(request,response);
 
         }else if("delete".equals(action)){
             int id=getId(request);
@@ -84,7 +84,7 @@ public class MealServlet extends HttpServlet {
                     ?new Meal(AuthorizedUser.id(),LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES),"",1000)
                     :controller.get(getId(request));
             request.setAttribute("meals",meal);
-            request.getRequestDispatcher("/meals.jsp").forward(request,response);
+            request.getRequestDispatcher("meals.jsp").forward(request,response);
 
         }
     }
