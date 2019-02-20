@@ -10,6 +10,8 @@ import java.time.LocalDate;
 import java.util.Collection;
 import java.util.List;
 
+import static ru.javawebinar.topjava.util.ValidationUtil.checkNotFoundWithId;
+
 @Service
 public class MealServiceImpl implements MealService {
 
@@ -33,12 +35,12 @@ public class MealServiceImpl implements MealService {
 
     @Override
     public void delete(int id, int userId) throws NotFoundException {
-        repository.delete(id,userId);
+       checkNotFoundWithId(repository.delete(id,userId),id);
     }
 
     @Override
     public Meal get(int id, int userId) throws NotFoundException {
-        return repository.get(id,userId);
+        return checkNotFoundWithId(repository.get(id,userId),id);
     }
 
     @Override
