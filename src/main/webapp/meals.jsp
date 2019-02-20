@@ -19,7 +19,22 @@
 <body>
 <section>
     <h3><a href="index.html">Home</a></h3>
-    <h2>Meals</h2>
+    <h2>Meals list</h2>
+    <form method="get" action="meals">
+        <input type="hidden" name="action" value="filter">
+        <dl>
+            <dt>Date range:</dt>
+            <dt><input type="date" name="${startDate}" value="startDate"></dt>
+            -
+            <dt><input type="date" name="${endDate}" value="endDate"></dt>
+        </dl>
+        <dl>
+            <dt><input type="time" name="${startTime}" value="startTime"></dt>
+            -
+            <dt><input type="time" name="${endTime}" value="endTime"></dt>
+        </dl>
+        <button type="submit">Filter</button>
+    </form>
     <a href="meals?action=create">Add Meal</a>
     <hr/>
     <table border="1" cellpadding="8" cellspacing="0">
