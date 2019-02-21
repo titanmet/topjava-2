@@ -1,7 +1,5 @@
 # Онлайн проект <a href="https://github.com/JavaWebinar/topjava">Topjava</a>
  
- https://blog.jetbrains.com/idea/2009/03/excluding-classes-from-auto-import/
- 
 ## [Материалы занятия](https://drive.google.com/drive/u/0/folders/0B9Ye2auQ_NsFT1NxdTFOQ1dvVnM)  (скачать все патчи можно через Download папки patch)
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW02
