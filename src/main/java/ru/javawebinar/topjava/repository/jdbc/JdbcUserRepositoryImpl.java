@@ -59,6 +59,7 @@ public class JdbcUserRepositoryImpl implements UserRepository {
 
     @Override
     public boolean delete(int id) {
+
         return jdbcTemplate.update("DELETE FROM users WHERE id=?", id) != 0;
     }
 
@@ -77,6 +78,7 @@ public class JdbcUserRepositoryImpl implements UserRepository {
 
     @Override
     public List<User> getAll() {
+
         return jdbcTemplate.query("SELECT * FROM users ORDER BY name, email", ROW_MAPPER);
     }
 }
