@@ -118,6 +118,7 @@ GRANT ALL PRIVILEGES ON DATABASE topjava TO "user";
   - [Книги по PostgreSQL](https://postgrespro.ru/education/books)
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQWtHYU1qTDlMWVE">Настройка Database в IDEA.</a>
+> Если проблемы к коннекшеном Heroku (`could not be verified by hostnameverifier PgjdbcHostnameVerifier`) к  `database.url` добавьте `&sslmode=require`
 #### Apply 3_09_add_postgresql.patch
 -  <a href="http://habrahabr.ru/company/JetBrains/blog/204064/">Настройка Database в IDEA</a> и запуск SQL.
 
