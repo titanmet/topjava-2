@@ -2,6 +2,7 @@ package ru.javawebinar.topjava.repository;
 
 import ru.javawebinar.topjava.model.Meal;
 
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 import java.util.List;
 
