@@ -1,7 +1,5 @@
 package ru.javawebinar.topjava.model;
 
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -17,7 +15,7 @@ import java.time.LocalTime;
                 "m.calories=:calories,m.dateTime=:date_time WHERE m.id=:id AND m.user.id=:userId"),
         @NamedQuery(name = Meal.DELETE,query = "DELETE FROM Meal m WHERE m.id=:id AND m.user.id=:userId"),
         @NamedQuery(name = Meal.GET,query = "SELECT m FROM Meal m WHERE m.id=:id AND m.user.id=:userId"),
-        @NamedQuery(name = Meal.ALL,query = "SELECT m FROM Meal m WHERE m.user.id=:userId ORDER BY m.dateTime DESC "),
+        @NamedQuery(name = Meal.ALL_SORTED,query = "SELECT m FROM Meal m WHERE m.user.id=:userId ORDER BY m.dateTime DESC "),
         @NamedQuery(name = Meal.BETWEEN,query = "SELECT m FROM Meal m WHERE m.user.id=:userId " +
                 "AND (m.dateTime BETWEEN :startDate AND :endDate) ORDER BY m.dateTime DESC ")
 })
@@ -29,7 +27,7 @@ public class Meal extends AbstractBaseEntity {
     public static final String UPDATE="Meal.update";
     public static final String DELETE="Meal.delete";
     public static final String GET="Meal.get";
-    public static final String ALL="Meal.getAll";
+    public static final String ALL_SORTED="Meal.getAll";
     public static final String BETWEEN="Meal.getBetween";
 
     @Column(name = "date_time", nullable = false,unique = true)
@@ -48,7 +46,6 @@ public class Meal extends AbstractBaseEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @NotNull
     private User user;
 

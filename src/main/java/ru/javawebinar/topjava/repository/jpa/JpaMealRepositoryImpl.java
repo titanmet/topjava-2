@@ -37,12 +37,12 @@ public class JpaMealRepositoryImpl implements MealRepository {
     }
 
     @Override
+    @Transactional
     public boolean delete(int id, int userId) {
-        Query query = em.createNamedQuery(Meal.DELETE);
-        query.setParameter("id", id);
-        query.setParameter("userId", userId);
-        List<Meal> meals = query.getResultList();
-        return query.executeUpdate() != 0;
+        return em.createNamedQuery(Meal.DELETE)
+                .setParameter("id",id)
+                .setParameter("userId",userId)
+                .executeUpdate()!=0;
     }
 
     @Override
@@ -52,11 +52,12 @@ public class JpaMealRepositoryImpl implements MealRepository {
         query.setParameter("userId", userId);
         List<Meal> meals = query.getResultList();
         return DataAccessUtils.singleResult(meals);
+
     }
 
     @Override
     public List<Meal> getAll(int userId) {
-        return em.createNamedQuery(Meal.ALL, Meal.class).setParameter("userId", userId).getResultList();
+        return em.createNamedQuery(Meal.ALL_SORTED, Meal.class).setParameter("userId", userId).getResultList();
     }
 
     @Override
