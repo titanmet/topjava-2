@@ -55,7 +55,9 @@ GROUP BY u.id
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png)  4. [Миграция на JUnit 5](https://drive.google.com/open?id=16wi0AJLelso-dPuDj6xaGL7yJPmiO71e)
 #### Apply 7_08_JUnit5.patch
-> [No need `junit-platform-surefire-provider` dependency in `maven-surefire-plugin`](https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven)
+> - [No need `junit-platform-surefire-provider` dependency in `maven-surefire-plugin`](https://junit.org/junit5/docs/current/user-guide/#running-tests-build-maven)
+> - [IDEA пока не понимает аннотации `@SpringJUnitConfig`](https://youtrack.jetbrains.com/issue/IDEA-166549). Можно временно поменять на `SpringJUnitConfig + @ExtendWith`. Не забудте залогинится и проголосовать за починку бага (справа вверху).
+
 
 - [JUnit 5 homepage](https://junit.org/junit5)
 - [Overview](https://junit.org/junit5/docs/snapshot/user-guide/#overview)
