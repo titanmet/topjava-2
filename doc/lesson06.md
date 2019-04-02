@@ -270,7 +270,7 @@ Hibernate supports following open-source cache implementations out-of-the-box: E
 - 2.1 Добавить транзакционность (`DataSourceTransactionManager`) в Jdbc реализации  
 - 2.2 Добавить еще одну роль к юзеру Admin (будет 2 роли: `ROLE_USER, ROLE_ADMIN`)
 - 2.3 Добавить проверку ролей в UserTestData.assertMatch
-- 2.4 Починить тесты в `JdbcUserRepositoryImpl` (добавить роли). Доставать можно двумя способами: одним запросом с JOIN либо двумя запросами: отдельно `users` и отдельно `roles`.
+- 2.4 Починить имеющиеся и добавить новые тесты в `JdbcUserRepositoryImpl` (добавить роли). Доставать можно двумя способами: одним запросом с JOIN либо двумя запросами: отдельно `users` и отдельно `roles`.
   - 2.4.1 В реализации `getAll` НЕ делать запрос ролей для каждого юзера (N+1 select)
   - 2.4.2 При save посмотрите на <a href="https://www.mkyong.com/spring/spring-jdbctemplate-batchupdate-example/">batchUpdate()</a>
 - [Объяснение SQL JOIN](http://www.skillz.ru/dev/php/article-Obyasnenie_SQL_obedinenii_JOIN_INNER_OUTER.html)
@@ -300,9 +300,11 @@ Hibernate supports following open-source cache implementations out-of-the-box: E
 - 3: Если неправильно формируется url относительно контекста приложения (например `/topjava/meals/meals`), посмотрите на
   -  <a href="http://stackoverflow.com/questions/4764405/how-to-use-relative-paths-without-including-the-context-root-name">Relative paths in JSP</a>
   -  <a href="http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-redirecting-redirect-prefix">Spring redirect: prefix</a>
-- 4: При проблемах с запуском томкат проверьте запущенные `java` процессы, нет ли в `TOMCAT_HOME\webapps` приложения каталога `topjava`, логи tomcat - нет ли проблем с доступом к каталогам или контекстом Spring.
+- 4: При проблемах с запуском томкат проверьте запущенные `java` процессы, нет ли в `TOMCAT_HOME\webapps` приложения каталога `topjava`, логи tomcat - нет ли проблем с доступом к каталогам или контекстом Spring
 - 5: Если создаете List с одним значением или Map с одним ключом-значением, пользуйтесь `Collections.singleton..`
 - 6: В MealController общую часть `@RequestMapping(value = "/meals")` лучше вынести на уровень класса
-- 7: Не забывайте при реализации `JdbcUserRepositoryImpl` про `Map.computeIfAbsent` и `EnumSet`
+- 7: Не забывайте при реализации `JdbcUserRepositoryImpl` про `Map.computeIfAbsent`
 - 8: Проверьте `@Transactional(readOnly = true)` сверху `Jdbc..RepositoryImpl`
-- 9: Проверьте, что `config\messages\app_ru.properties` у вас в кодировке UTF-8 (в любом редакторе/вьюере или при отключенном [Transparent native-to-ascii conversion](https://github.com/JavaOPs/topjava/wiki/IDEA#%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D1%83-utf-8) в IDEA). ASCII коды нужны были только для JSP.
+- 9: Проверьте, что `config\messages\app_ru.properties` у вас в кодировке UTF-8 (в любом редакторе/вьюере или при отключенном [Transparent native-to-ascii conversion](https://github.com/JavaOPs/topjava/wiki/IDEA#%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D1%83-utf-8) в IDEA). ASCII коды нужны были только для JSP
+- 10: Учтите, что роли у юзеров можно менять/добавлять/удалять
+- 11: Убедитесь, что все методы UserService корректно работают с юзерами, у которых несколько ролей
