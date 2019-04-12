@@ -148,6 +148,10 @@ $('.delete').click(function () {
 
 На все элементы DOM с классом `delete` вешается обработчик события `click` который вызывает функцию `deleteRow`. Классы в html разделяются через пробел. См. [селекторы в jQuery](http://anton.shevchuk.name/javascript/jquery-for-beginners-selectors/)
 
+> Как в таблицу `<table id="datatable">` из JSP вставляются дополнительные `div`, поле для поиска, стрелочки для сортировки и т.д. (видны в браузере через `Inspect (Ctrl+Shift+I)` в хроме) ?
+
+JSP отдает html на клиента, в браузере играется скрипт `$("#datatable").DataTable(..)`, который модифицирует элемент таблицы и вставляет туда (в элементы DOM html документа) все табличные плюшки.
+
 > тянет ли Bootstrap за собой jQuery?
 
 Bootstrap css это стили (форматирование), Bootstrap js зависит от jQuery: http://stackoverflow.com/questions/14608681/can-i-use-twitter-bootstrap-without-jquery#answer-14608772
