@@ -109,7 +109,7 @@
 -  <a href="https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#userdetailsservice-implementations">UserDetailsService Implementations</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 9.  <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFT2Qya2V4N0kzWWM">Принцип работы Spring Security. Проксирование.</a>
--  <a href="http://www.spring-source.ru/articles.php?type=manual&theme=articles&docs=article_07">Принцип работы Spring Security</a>
+-  <a href="https://ru.wikibooks.org/wiki/Spring_Security/Технический_обзор_Spring_Security">Технический обзор Spring Security</a>
 -  <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#aop-proxying">Типы проксирования</a>
 -  <a href="http://samolisov.blogspot.ru/2010/04/proxy-java.html">Dynamic Proxy API</a>
 -  <a href="https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#filter-stack">Security фильтры</a>
