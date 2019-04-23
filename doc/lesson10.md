@@ -143,8 +143,8 @@ Datatables перевели на ajax (`"ajax": {"url": ajaxUrl, ..`), те пр
 **Поломалась UTF-8 кодировка в редактировании профиля и регистрациию (если по умолчанию не UTF-8). В Optional HW10 нужно будет починить.**
  
 -  <a class="anchor" id="csrf"></a><a href="https://ru.wikipedia.org/wiki/Межсайтовая_подделка_запроса">Межсайтовая подделка запроса (CSRF)</a>
--  <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html/csrf.html#csrf-using/">Using Spring Security CSRF Protection</a>
--  <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html/csrf.html#csrf-include-csrf-token-ajax">Ajax and JSON Requests</a>
+-  <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html/web-app-security.html#csrf-using">Using Spring Security CSRF Protection</a>
+-  <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html/web-app-security.html#csrf-include-csrf-token-ajax">Ajax and JSON Requests</a>
 -  <a href="http://blog.jdriven.com/2014/10/stateless-spring-security-part-1-stateless-csrf-protection/">Stateless CSRF protection</a>
 -  Ресурсы:
     -  <a href="http://habrahabr.ru/post/264641/">Spring Security 4 + CSRF</a>
