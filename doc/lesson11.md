@@ -21,6 +21,7 @@
 > - Советы по дополнительным настройкам: 
 >   - [Customize IntelliJ IDEA Memory](http://tomaszdziurko.com/2015/11/1-and-the-only-one-to-customize-intellij-idea-memory-settings)
 >   - [Increase IDE memory limit in IntelliJ IDEA](http://tomaszdziurko.com/2015/11/1-and-the-only-one-to-customize-intellij-idea-memory-settings)
+>   - [Slow startup time on Windows](https://youtrack.jetbrains.com/issue/IDEA-211178#focus=streamItem-27-3412218.0-0)
 
 #### Apply 11_02_HW10_validation.patch
 > - В [соответствии со спицификацией](http://stackoverflow.com/a/22358422/548473) для поменял `HTTP 400` (ошибка в структуре сообщения) на `HTTP 422` (ошибка в содержании)
@@ -138,14 +139,13 @@ Datasources advanced
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png)  Домашнее задание по проекту:
 - **Задеплоить свое приложение в Heroku** 
-- [Маленькие хитрости с Heroku](https://javarush.ru/groups/posts/1987-malenjhkie-khitrosti-s-heroku)
-
+   - [Маленькие хитрости с Heroku](https://javarush.ru/groups/posts/1987-malenjhkie-khitrosti-s-heroku)
 - Сделать / обновить резюме (отдать на ревью в канал #hw11 группы slack)
   - [Загрузка сайта на GitHub. Бесплатный хостинг и домен.](https://vk.com/video-58538268_456239051?list=661b165047264e7952)
   - [CSS theme for hosting your personal site, blog, or portfolio](https://mademistakes.com/work/minimal-mistakes-jekyll-theme/)
 - Заполнить в [своем профиле Java Online Projects](http://javaops.ru/view/login) ссылку на резюме и информацию по поиску работы (если конечно актуально): резюме, флаги рассматриваю работу, готов к релокации и информация для HR.
-- **Обновления базы соискателей буду рассылать по HR ночью на 27.12, постарайтесь успеть**
-- Заполнить [форму проверки выпускного проекта](https://docs.google.com/forms/d/1G8cSGBfXIy9bNECo6L-tkxWQYWeVhfzR7te4b-Jwn-Q) (возможно доплатить за ревью отдельно из JavaOPs профиля, как за тестовое собеседование: 1950р)
+- **Обновления базы соискателей буду рассылать по HR утром 06.05, постарайтесь успеть**
+- **Заполнить [форму проверки выпускного проекта](https://docs.google.com/forms/d/1G8cSGBfXIy9bNECo6L-tkxWQYWeVhfzR7te4b-Jwn-Q) (возможно доплатить за ревью отдельно из JavaOPs профиля, как за тестовое собеседование: 1950р)**
   - Для участников с проверкой выпускной проект принимаю на ревью до 16.05 (участникам [Masterjava](http://javaops.ru/view/masterjava) до 16.08).
 - **Получить первое открытое занятие МНОГОПОТОЧНОСТЬ и пройти эту важную тему в [проекте Masterjava](http://javaops.ru/view/masterjava)**
    - Обучение на Masterjava сейчас идет в индивидуальном режиме, старт в любое время.
